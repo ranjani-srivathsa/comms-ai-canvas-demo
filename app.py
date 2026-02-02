@@ -135,7 +135,7 @@ if st.button("Generate Communication Assets"):
         # Everything inside the spinner must be indented
         st.write("DEBUG — Canvas Data:")
         st.write(canvas_data)
-     system_prompt = f"""
+system_prompt = f"""
 You are a senior strategy consulting communication advisor.
 
 Your job is NOT just to write text.
