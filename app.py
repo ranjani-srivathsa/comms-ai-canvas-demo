@@ -132,7 +132,8 @@ Expression Style:
 st.divider()
 if st.button("Generate Communication Assets"):
     with st.spinner("Generating..."):
-
+st.write("DEBUG — Canvas Data:")
+st.write(canvas_data)
      system_prompt = f"""
 You are a senior strategy consulting communication advisor.
 
