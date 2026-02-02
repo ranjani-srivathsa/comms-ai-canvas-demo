@@ -180,12 +180,10 @@ If it sounds like a template, rewrite it.
 
 Generate now.
 """
-        response = client.chat.completions.create(
+response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
-             
-    {"role": "system", "content": system_prompt}
-
+                 {"role": "system", "content": system_prompt}
             ],
             temperature=0.4,
             max_tokens=1200
