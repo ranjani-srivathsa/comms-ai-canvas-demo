@@ -168,7 +168,7 @@ STEP 2 — OUTPUT GENERATION
    - Maximum 3 concise paragraphs
    - Neutral, collective voice only
    - Use high-level abstract benefits derived from canvas
-   - Subtly reassure audience without naming fears or gaps
+   - Subtly reassure audience without directly naming existing perceptions or expectations from the canvas
    - Place CTA exactly at the end (from canvas)
 3. Leadership Talking Points:
    - 4–6 concise bullets max
