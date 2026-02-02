@@ -197,7 +197,7 @@ REQUESTED OUTPUT TYPES
 STRICT RULES:
 - Do NOT generate outputs not selected
 - Do NOT add extra commentary or sections
-- Do NOT invent deadlines, owners, platforms, or content
+- Do NOT invent CTA, deadlines, owners, platforms, or content
 """
 response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
