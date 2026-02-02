@@ -155,53 +155,42 @@ INPUTS:
 - Expression / Style: {expression_style}
 - Call to Action: {cta}
 
-========================
-STEP 1 — INTERNAL INTERPRETATION (DO NOT SHOW)
-========================
-First, internally interpret the canvas and derive communication strategy:
+TASK:
+1. Generate ONLY the output types selected: {outputs}
+2. Output instructions by type:
 
-From the canvas, determine:
-- Audience mindset, maturity, and likely resistance or expectations
-- Existing perceptions and how they affect tone
-- Which values and emotions must be subtly reinforced
-- Whether tone should be directive, supportive, corrective, or political
-- How expression style should influence sentence length, sharpness, and formality
-- What NOT to over-emphasize based on the audience context
+**Email:**
+- Subject line concise & clear
+- Greeting: "Dear {role},"
+- Body: 3–5 short paragraphs or 5–6 sentences max
+- Emphasize Value Proposition and Main Objective
+- Address Existing Perceptions briefly if needed
+- Reinforce Values/Emotions subtly
+- Include CTA exactly as provided, at the END
+- Avoid “I/we”, generic corporate phrasing, or abstract statements
 
-Use this internal interpretation to shape the writing.
-DO NOT show this analysis in the final output.
+**Leadership Talking Points:**
+- 4–6 short bullets
+- Highlight key messages from Value Proposition and Main Objective
+- Reinforce Values/Emotions subtly
+- Include CTA as action item
+- Keep it short, punchy, actionable
 
-========================
-STEP 2 — APPLY STRATEGY TO OUTPUT
-========================
-Now generate the requested outputs using the strategy above.
+**1-Page Summary:**
+- 1 page (~200–250 words)
+- Summarize Main Objective, Problem/Opportunity, Value Proposition
+- Use short paragraphs
+- Reinforce Values/Emotions subtly
+- Include CTA at the end
+- Avoid generic justifications or motivational fluff
 
-Quality bar:
-- Must read like a top-tier consulting firm wrote it
-- Must NOT sound like a generic corporate template
-- Must visibly reflect audience, perceptions, and emotional context
-- Avoid generic buzzwords and campaign language
-- Do NOT invent governance, owners, platforms, or deadlines unless provided
+STRICT RULES:
+- Do NOT generate outputs not selected
+- Do NOT add extra commentary or sections
+- Do NOT invent deadlines, owners, platforms, or content
 
-Tone control:
-- Adapt tone based on Existing Perceptions and Expression Style
-- Reinforce selected Value Reflections through subtle language (not labels)
-- If audience may be skeptical or overloaded, address this implicitly
-
-STRICT OUTPUT RULES:
-- Generate ONLY the output types explicitly selected by the user
-- Do NOT generate extra sections or assets
-- Do NOT include headings like "What's changing" unless appropriate for the canvas
-
-========================
-CANVAS (SOURCE OF TRUTH)
-========================
-{canvas_data}
-
-========================
-REQUESTED OUTPUT TYPES
-========================
-{outputs}
+OUTPUT:
+Generate the outputs in clearly labeled sections.
 """
 response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
