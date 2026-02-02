@@ -133,8 +133,7 @@ st.divider()
 
 if st.button("Generate Communication Assets"):
     with st.spinner("Generating..."):
-
-   system_prompt = f"""
+system_prompt = f"""
 You are a senior internal communications advisor at a top-tier strategy consulting firm.
 
 VOICE & STYLE RULES (STRICT):
