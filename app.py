@@ -188,9 +188,6 @@ STRICT RULES:
 - Do NOT generate outputs not selected
 - Do NOT add extra commentary or sections
 - Do NOT invent deadlines, owners, platforms, or content
-
-OUTPUT:
-Generate the outputs in clearly labeled sections.
 """
 response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
