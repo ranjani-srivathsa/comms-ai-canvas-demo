@@ -188,8 +188,6 @@ response = client.chat.completions.create(
             temperature=0.4,
             max_tokens=1200
         )
-
         result = response.choices[0].message.content
-
         st.success("Generated Successfully")
         st.text_area("Generated Outputs", result, height=500)
