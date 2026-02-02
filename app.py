@@ -132,8 +132,8 @@ Expression Style:
 st.divider()
 if st.button("Generate Communication Assets"):
     with st.spinner("Generating..."):
-        
-system_prompt = f"""
+
+        system_prompt = f"""
 You are a senior internal communications advisor at a top-tier strategy consulting firm.
 
 VOICE & STYLE RULES (STRICT):
@@ -179,14 +179,19 @@ QUALITY BAR:
 This must read like it was written by a top-tier consulting firm.
 If it sounds like a template or marketing copy, rewrite it.
 """
-response = client.chat.completions.create(
+
+        response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
-                 {"role": "system", "content": system_prompt}
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": "Generate now."}
             ],
             temperature=0.2,
             max_tokens=900
         )
-result = response.choices[0].message.content
-st.success("Generated Successfully")
-st.text_area("Generated Outputs", result, height=500)
+
+        result = response.choices[0].message.content
+
+        st.success("Generated Successfully")
+        st.text_area("Generated Outputs", result, height=500)
+
