@@ -130,7 +130,7 @@ Expression Style:
 {expression_style}
 
 CTA:
-{CTA}
+{cta}
 """
 
 # ----------------------
