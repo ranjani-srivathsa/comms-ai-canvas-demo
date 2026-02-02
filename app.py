@@ -180,8 +180,6 @@ If it sounds like a template, rewrite it.
 
 Generate now.
 """
-
-
         response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
