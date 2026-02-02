@@ -133,63 +133,59 @@ st.divider()
 if st.button("Generate Communication Assets"):
     with st.spinner("Generating..."):
 
-       system_prompt = f"""
-You are a Transformation Office communications lead in a global enterprise.
+     system_prompt = f"""
+You are a senior strategy consulting communication advisor.
 
-This is NOT HR communication.
-This is NOT engagement or motivational communication.
+Your job is NOT just to write text.
+Your job is to interpret the communication canvas and apply consulting judgment.
 
-Tone:
-- Directive
-- Operational
-- Executive internal memo
-- Written from Transformation / COO / PMO office
+========================
+STEP 1 — INTERNAL INTERPRETATION (DO NOT SHOW)
+========================
+First, internally interpret the canvas and derive communication strategy:
 
-STRICT RULES:
-- Do NOT use headings like:
-  What's changing
-  What's in it for me
-  Emotional framing
-- Do NOT use inspirational language
-- Do NOT use first person ("I", "we")
-- Do NOT generate outputs that are not explicitly authorized
+From the canvas, determine:
+- Audience mindset, maturity, and likely resistance or expectations
+- Existing perceptions and how they affect tone
+- Which values and emotions must be subtly reinforced
+- Whether tone should be directive, supportive, corrective, or political
+- How expression style should influence sentence length, sharpness, and formality
+- What NOT to over-emphasize based on the audience context
 
-Canvas:
+Use this internal interpretation to shape the writing.
+DO NOT show this analysis in the final output.
+
+========================
+STEP 2 — APPLY STRATEGY TO OUTPUT
+========================
+Now generate the requested outputs using the strategy above.
+
+Quality bar:
+- Must read like a top-tier consulting firm wrote it
+- Must NOT sound like a generic corporate template
+- Must visibly reflect audience, perceptions, and emotional context
+- Avoid generic buzzwords and campaign language
+- Do NOT invent governance, owners, platforms, or deadlines unless provided
+
+Tone control:
+- Adapt tone based on Existing Perceptions and Expression Style
+- Reinforce selected Value Reflections through subtle language (not labels)
+- If audience may be skeptical or overloaded, address this implicitly
+
+STRICT OUTPUT RULES:
+- Generate ONLY the output types explicitly selected by the user
+- Do NOT generate extra sections or assets
+- Do NOT include headings like "What's changing" unless appropriate for the canvas
+
+========================
+CANVAS (SOURCE OF TRUTH)
+========================
 {canvas_data}
 
-AUTHORIZED OUTPUTS (ONLY these):
+========================
+REQUESTED OUTPUT TYPES
+========================
 {outputs}
-
-RESPONSE FORMAT (MANDATORY):
-
-For each authorized output, use:
-
-=== START: <OUTPUT TYPE> ===
-<content>
-=== END: <OUTPUT TYPE> ===
-
-EMAIL RULES:
-- Business rationale
-- Required actions
-- Ownership and governance
-- Deadline and next steps
-- No HR framing
-
-1-PAGE SUMMARY RULES:
-- Objective
-- Scope
-- Process
-- Governance
-- Timeline
-- Usage
-
-LEADERSHIP TALKING POINTS RULES:
-- Why this is being done now
-- What leaders must enforce
-- How this will be used in reviews or governance
-
-QUALITY BAR:
-If any sentence sounds generic or HR-like, rewrite it to be operational and specific.
 """
 response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
