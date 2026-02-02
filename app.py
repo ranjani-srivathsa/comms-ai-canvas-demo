@@ -139,7 +139,7 @@ if st.button("Generate Communication Assets"):
         # Everything inside the spinner must be indented
         st.write("DEBUG — Canvas Data:")
         st.write(canvas_data)
-      system_prompt = f"""
+system_prompt = f"""
 You are an internal communications assistant. Your job is to create professional internal communication outputs based on structured inputs.
 Your job is NOT just to write text. You must interpret the communication canvas and apply consulting judgment to produce polished, strategic internal communications.
 
