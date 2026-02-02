@@ -151,7 +151,7 @@ IMPORTANT RULES:
 - Geography is ONLY for audience context. Do NOT generate sentences like "we drive growth across {geo}".
 - Use neutral/collective voice ("We encourage…", "The team invites…"). Do NOT use "I" or personal expressions.
 - Subtly address audience perceptions or concerns indirectly, without mentioning fears, gaps, or negative expectations.
-- Include the CTA exactly as provided in the canvas at the END of the email or output. Do NOT invent CTAs, platforms, or deadlines.
+- Do NOT invent CTAs, platforms, or deadlines.
 - Outputs must reflect the selected Values/Emotions from the canvas.
 - Avoid repeating keywords verbatim from the canvas.
 
@@ -172,7 +172,6 @@ STEP 2 — OUTPUT GENERATION
    - Neutral, collective voice only
    - Use high-level abstract benefits derived from canvas
    - Subtly reassure audience without directly naming existing perceptions or expectations from the canvas
-   - Place CTA exactly at the end (from canvas)
 3. Leadership Talking Points:
    - 4–6 concise bullets max
    - Include CTA as one bullet
