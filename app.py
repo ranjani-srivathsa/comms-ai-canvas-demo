@@ -131,7 +131,7 @@ Expression Style:
 # ----------------------
 st.divider()
 if st.button("Generate Communication Assets"):
-with st.spinner("Generating..."):
+    with st.spinner("Generating..."):
 system_prompt = f"""
 You are a senior internal communications advisor at a top-tier strategy consulting firm.
 
@@ -183,8 +183,8 @@ response = client.chat.completions.create(
             messages=[
                  {"role": "system", "content": system_prompt}
             ],
-            temperature=0.4,
-            max_tokens=1200
+            temperature=0.2,
+            max_tokens=900
         )
 result = response.choices[0].message.content
 st.success("Generated Successfully")
