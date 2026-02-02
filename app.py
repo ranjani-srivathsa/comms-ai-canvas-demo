@@ -191,6 +191,7 @@ REQUESTED OUTPUT TYPES
 response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
+               {"role": "system", "content": system_prompt},
                {"role": "user", "content": "Generate ONLY the selected outputs using the canvas."}
             ],
             temperature=0.2,
