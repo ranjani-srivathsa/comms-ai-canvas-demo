@@ -186,7 +186,6 @@ STRICT RULES:
 - Do NOT add extra commentary, sections, examples, workshops, teams, schedules, or deadlines.
 - Do NOT include personal expressions or "I" statements.
 - Only generate outputs selected.
-- CTA must appear exactly as provided at the end.
 """
 
 response = client.chat.completions.create(
