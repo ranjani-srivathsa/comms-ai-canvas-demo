@@ -98,7 +98,7 @@ else:
         ["Professional", "Concise", "Warm", "Executive-style", "Inspirational"]
     )
     
-    cta = st.text_input("Call to Action (1 sentence) — e.g., 'Submit your story to X by Y date'")
+    cta = st.text_input("Call to Action (in sentence) — e.g., 'Submit your story to X by Y date'")
 
     st.markdown("### Outputs")
     outputs = st.multiselect(
@@ -128,6 +128,9 @@ Existing Perceptions:
 
 Expression Style:
 {expression_style}
+
+CTA:
+{CTA}
 """
 
 # ----------------------
