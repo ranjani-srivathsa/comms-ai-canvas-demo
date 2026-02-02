@@ -201,7 +201,6 @@ response = client.chat.completions.create(
             max_tokens=900
         )
 result = response.choices[0].message.content
-
-        st.success("Generated Successfully")
-        st.text_area("Generated Outputs", result, height=500)
+st.success("Generated Successfully")
+st.text_area("Generated Outputs", result, height=500)
 
