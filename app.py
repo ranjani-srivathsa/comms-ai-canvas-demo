@@ -184,20 +184,6 @@ STEP 2 — OUTPUT CREATION
 6. Do NOT invent governance, owners, platforms, deadlines, or content not provided in the canvas.
 
 ========================
-EXAMPLE STYLE
-========================
-Dear Business Unit Leads,
-
-The team invites you to share your department's success stories. Sharing these stories provides recognition, inspires colleagues, and promotes collaboration.
-
-Please submit your story to Xx@change.com by February 10.
-
-Best regards,
-[Your Name]
-
-Follow this style exactly: concise paragraphs, professional tone, collective/neutral voice, CTA at the end.
-
-========================
 CANVAS (SOURCE OF TRUTH)
 ========================
 {canvas_data}
