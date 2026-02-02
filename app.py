@@ -152,6 +152,7 @@ IMPORTANT INSTRUCTIONS:
 - Avoid generic filler or over-justification. Only include what is relevant to motivate and engage the audience. 
 - Subtly address audience expectations or concerns indirectly, without directly naming fears, gaps, or problems.
 - Keep sentences concise (15–20 words max) and paragraphs short (max 5–6 sentences for email).
+- DO NOT HALLUCINATE. REFLECT ONLY ON THE CANVAS INPUTS 
 
 ========================
 STEP 1 — HIGH-LEVEL INTERNAL INTERPRETATION (DO NOT SHOW)
