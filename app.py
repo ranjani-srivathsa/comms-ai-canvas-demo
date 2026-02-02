@@ -68,6 +68,7 @@ else:
 
     st.markdown("### Target Audience")
     exp_level = st.multiselect("Experience Level", ["Early career", "Mid-level", "Senior", "Executive"])
+    role = st.text_input("Audience Role (e.g., Business Unit Lead, Project Manager)")
     geo = st.multiselect("Geography", ["Global", "North America", "Europe", "India", "APAC", "Middle East & Africa"])
     internal_external = st.selectbox("Internal / External", ["Internal", "External", "Both"])
 
@@ -96,6 +97,7 @@ else:
         "Expression / Style",
         ["Professional", "Concise", "Warm", "Executive-style", "Inspirational"]
     )
+   cta = st.text_input("Call to Action (1 sentence) — e.g., 'Submit your story to X by Y date'")
 
     st.markdown("### Outputs")
     outputs = st.multiselect(
@@ -105,6 +107,7 @@ else:
 
     canvas_data = f"""
 Audience Experience Level: {exp_level}
+Role: {role}
 Geography: {geo}
 Internal/External: {internal_external}
 
@@ -135,59 +138,43 @@ if st.button("Generate Communication Assets"):
         # Everything inside the spinner must be indented
         st.write("DEBUG — Canvas Data:")
         st.write(canvas_data)
-system_prompt = f"""
-You are a senior strategy consulting communication advisor.
+        system_prompt = f"""
+You are an internal communications assistant. Your job is to create professional internal communication outputs based on structured inputs.
 
-Your job is NOT just to write text.
-Your job is to interpret the communication canvas and apply consulting judgment.
+INPUTS:
+- Audience Role: {role}
+- Experience Level: {exp_level}
+- Geography: {geo}
+- Internal/External: {internal_external}
+- Main Objective: {main_objective}
+- Problem / Opportunity: {problem_opportunity}
+- Value Proposition: {value_prop}
+- Values / Emotions: {value_reflections}
+- Existing Perceptions: {existing_perceptions}
+- Expression / Style: {expression_style}
+- Call to Action: {cta}
 
-========================
-STEP 1 — INTERNAL INTERPRETATION (DO NOT SHOW)
-========================
-First, internally interpret the canvas and derive communication strategy:
+TASK:
+1. Use the above inputs to create professional internal communications.
+2. Write outputs ONLY of the types selected by the user: {outputs}.
+3. For Emails:
+   - Subject line (concise, clear)
+   - Greeting matching audience role
+   - Body that emphasizes value proposition and addresses existing perceptions
+   - Include the CTA prominently
+4. For Leadership Talking Points:
+   - Short, punchy bullets
+   - Key messages, motivation, and CTA
+5. Tone:
+   - Match Expression / Style
+   - Reinforce Values / Emotions subtly
+6. Avoid:
+   - Generic corporate templates
+   - Buzzwords or invented processes/platforms
+   - Long paragraphs—keep concise
 
-From the canvas, determine:
-- Audience mindset, maturity, and likely resistance or expectations
-- Existing perceptions and how they affect tone
-- Which values and emotions must be subtly reinforced
-- Whether tone should be directive, supportive, corrective, or political
-- How expression style should influence sentence length, sharpness, and formality
-- What NOT to over-emphasize based on the audience context
-
-Use this internal interpretation to shape the writing.
-DO NOT show this analysis in the final output.
-
-========================
-STEP 2 — APPLY STRATEGY TO OUTPUT
-========================
-Now generate the requested outputs using the strategy above.
-
-Quality bar:
-- Must read like a top-tier consulting firm wrote it
-- Must NOT sound like a generic corporate template
-- Must visibly reflect audience, perceptions, and emotional context
-- Avoid generic buzzwords and campaign language
-- Do NOT invent governance, owners, platforms, or deadlines unless provided
-
-Tone control:
-- Adapt tone based on Existing Perceptions and Expression Style
-- Reinforce selected Value Reflections through subtle language (not labels)
-- If audience may be skeptical or overloaded, address this implicitly
-
-STRICT OUTPUT RULES:
-- Generate ONLY the output types explicitly selected by the user
-- Do NOT generate extra sections or assets
-- Do NOT include headings like "What's changing" unless appropriate for the canvas
-
-========================
-CANVAS (SOURCE OF TRUTH)
-========================
-{canvas_data}
-
-========================
-REQUESTED OUTPUT TYPES
-========================
-{outputs}
+OUTPUT:
+Generate the outputs in clear sections, labeled by type (Email / Leadership Talking Points). 
 """
 response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
