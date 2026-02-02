@@ -149,6 +149,7 @@ IMPORTANT:
 - Translate Main Objective and Value Proposition into **high-level benefits**, not literal steps.
 - Address audience concerns subtly and abstractly, without specifying mechanisms.
 - Focus on motivating the audience and reinforcing Values/Emotions.
+- Use neutral, collective voice only. Do NOT use "I" or personal expressions. 
 
 ========================
 STEP 1 — HIGH-LEVEL INTERNAL INTERPRETATION (DO NOT SHOW)
