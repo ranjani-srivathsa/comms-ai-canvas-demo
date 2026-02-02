@@ -191,7 +191,7 @@ LEADERSHIP TALKING POINTS RULES:
 QUALITY BAR:
 If any sentence sounds generic or HR-like, rewrite it to be operational and specific.
 """
-        response = client.chat.completions.create(
+response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[
                 {"role": "system", "content": system_prompt},
