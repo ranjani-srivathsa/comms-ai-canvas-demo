@@ -130,7 +130,6 @@ Expression Style:
 # GENERATE BUTTON
 # ----------------------
 st.divider()
-
 if st.button("Generate Communication Assets"):
 with st.spinner("Generating..."):
 system_prompt = f"""
