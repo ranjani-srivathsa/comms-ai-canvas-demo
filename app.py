@@ -194,8 +194,6 @@ CANVAS (SOURCE OF TRUTH)
 REQUESTED OUTPUT TYPES
 ========================
 {outputs}
-"""
-
 STRICT RULES:
 - Do NOT generate outputs not selected
 - Do NOT add extra commentary or sections
