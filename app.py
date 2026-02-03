@@ -167,7 +167,7 @@ STEP 1 — INTERNAL BULLET INTERPRETATION (DO NOT SHOW)
 STEP 2 — OUTPUT GENERATION
 1. Generate ONLY the outputs requested ({outputs}).
 2. Email:
-   - Greeting: "Dear {role},"
+   - Greeting: "Dear {{role}},"
    - Maximum 3 concise paragraphs
    - Neutral, collective voice only
    - Use high-level abstract benefits derived from canvas
